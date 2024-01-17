@@ -1,6 +1,8 @@
 export default function initAnimaNumeros(){
     const numeros = document.querySelectorAll('p');  
     const arrayNumeros = Array.from(numeros);
+    const background = document.querySelector('section')
+    background.setAttribute('id', 'info')
     
     function aumentaFont() {
         arrayNumeros.forEach((element) => {
@@ -10,5 +12,3 @@ export default function initAnimaNumeros(){
     aumentaFont();
 }
 
-const background = document.querySelector('section')
-background.setAttribute('id', 'info')
