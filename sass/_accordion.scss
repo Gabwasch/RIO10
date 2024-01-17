@@ -1,0 +1,32 @@
+ [data-anime="accordion"] dd{
+    display: none;
+}
+
+[data-anime="accordion"] dt{
+cursor: pointer;
+}
+
+[data-anime="accordion"] dt.ativo::after{
+content: '▲';
+}
+
+[data-anime="accordion"] dt::after{
+content: '⌄';
+margin-left: 10px;
+}
+
+[data-anime="accordion"] dd.ativo{
+display: block;
+animation: slideDown .5s forwards;
+}
+
+@keyframes slideDown{
+    from {
+        opacity: 0;
+        max-height: 0px;
+    }
+    to {
+        max-height: 150px;
+        opacity: 1;
+    }
+}

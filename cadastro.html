@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css" rel="stylesheet">
+    <title>Rio 10 - Cadastro</title>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg box-shadow fixed-top bg-light">
+			<div class="container-fluid">
+			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+					<a class="navbar-brand" href="./index.html">Rio10</a>
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./cadastro.html">Cadastre-se</a>
+						</li>
+					</ul>
+				<form class="d-flex" role="search">
+				  <input class="form-control me-2" type="search" placeholder="Pesquise" aria-label="Pesquise">
+				  <button class="btn btn-outline-primary" type="submit">Pesquise</button>
+				</form>
+			  </div>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<section class="text-center pt-4">
+            <div class="container text-bg-light align-items-center rounded">
+                <h1 class="display-4 mb-4">Crie sua conta:</h1>
+                <form class="row g-3 needs-validation justify-content-center" novalidate>
+                    <div class="row justify-content-center">
+                        <div class="col-xl-3">
+                            <div class="form-floating mb-3">
+                                <input type="name" class="form-control" id="nome" placeholder="Name" required>
+                                <label for="nome">Nome Completo</label>
+                              </div>
+                        </div>
+                        <div class="col-xl-3">
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                                <label for="email">Email</label>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-xl-3">
+                            <div class="form-floating mb-3">
+                                <input type="tel" class="form-control" id="telefone" placeholder="telefone" required>
+                                <label for="telefone">Telefone</label>
+                            </div>
+                        </div>
+                        <div class="col-xl-3">
+                            <div class="form-floating mb-3">
+                                <input type="date" class="form-control" id="data" placeholder="data" required>
+                                <label for="data">Data de nascimento</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-xl-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="endereco" placeholder="Endereço" required>
+                                <label for="endereco">Endereço</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-xl-6">
+                            <div class="form-floating text-black mb-3">
+                                <input type="text" class="form-control" id="nacionalidade" placeholder="nacionalidade" required>
+                                <label for="nacionalidade">Nacionalidade</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-xl-3">
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="senha" placeholder="Senha" required>
+                                <label for="senha">Senha</label>
+                            </div>
+                        </div>
+                        <div class="col-xl-3">
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="confirmarSenha" placeholder="Confirmar-Senha" required>
+                                <label for="confirmarSenha">Confirmar Senha</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-auto">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="gridCheck" required>
+                                <label class="form-check-label" for="gridCheck">
+                                    Concordo com os Termos de Uso
+                                </label>
+                                <div class="invalid-feedback">
+                                    Você precisa concordar com os termos.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-3">
+                        <button class="btn btn-primary" type="submit" formaction="./cadastroAtributos.html">Próximo</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-black" id="exampleModalLabel">Login</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-floating text-black mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Email address</label>
+                        </div>
+                        <div class="form-floating text-black mb-3">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+		</section>
+	</main>
+	<footer class="bg-dark text-white">
+			<div class="container text-center">
+				<div class="row justify-content-center">
+					<div class="col-md-3 py-3">
+						<h4 class="h6">PÁGINAS</h4>
+						<ul class="list-unstyled">
+							<li><a href="index.html" class="link">Home</a></li>
+							<li><a href="clube.html" class="link">Clube</a></li>
+							<li><a href="atleta.html" class="link">Atleta</a></li>
+							<li><a href="treinador.html" class="link">Treinador</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3 py-3">
+						<h4 class="h6">OUTROS</h4>
+						<ul class="list-unstyled">
+							<li><a href="#" class="link">Contato</a></li>
+							<li><a href="#" class="link">Sugestões</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4 py-3">
+						<h4 class="h6">SUPORTE</h4>
+						<ul class="list-unstyled text-light">
+							<li>suporte@gmail.com</li>
+							<li>51 99999-9999</li>
+							<li data-semana="1,2,3,4,5" data-horario="8,20">De Seg. à Sex. das 8h às 20h</li>
+						</ul>
+					</div>
+					<div class="col-md-2 py-3">
+						<h4 class="h6">REDES SOCIAIS</h4>
+						<ul class="list-unstyled">
+							<li>
+								<button type="button" class="btn btn-outline-light mb-2"><img src="./imagens/facebook.svg" style="height: 20px;"> Facebook</button>
+							</li>
+							<li>
+								<button type="button" class="btn btn-outline-light mb-2"><img src="./imagens/instagram.svg" style="height: 20px;"> Instagram</button>
+							</li>
+							<li>
+								<button type="button" class="btn btn-outline-light mb-2"><img src="./imagens/threads.svg" style="height: 20px;"> Threads</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+	</footer>
+</body>
+<script type="text/javascript" src="./js/jquery-3.3.1.slim.min.js"></script>
+<script type="text/javascript" src="./js/popper.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<script type="module" src="./js/script.js"></script>
+<script type="text/javascript" src="./js/script_padTela.js"></script>
+</html>
