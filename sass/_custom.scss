@@ -28,8 +28,6 @@ $theme-colors: (
   "link-color": $link-color,
   "link-hover-color": $link-hover-color,
 );
-  
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 // Then add additional custom code here
 
@@ -42,7 +40,7 @@ body{
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-#info{
+#beckground{
   background: linear-gradient(rgb(8, 54, 116), rgb(68, 105, 173));
   padding-bottom: 340px;
 }

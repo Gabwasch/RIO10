@@ -2,7 +2,7 @@ export default function initAnimaNumeros(){
     const numeros = document.querySelectorAll('p');  
     const arrayNumeros = Array.from(numeros);
     const background = document.querySelector('section')
-    background.setAttribute('id', 'info')
+    background.setAttribute('id', 'beckground')
     
     function aumentaFont() {
         arrayNumeros.forEach((element) => {
