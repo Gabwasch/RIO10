@@ -15,7 +15,6 @@ export default function validation(){
             }
       
             form.classList.add('was-validated')
-            btn.setAttribute('onclick.window.location.href="./cadastroAtributos.html"')
           }, false)
         })
       })()
