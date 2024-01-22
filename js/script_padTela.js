@@ -1,2 +1,2 @@
-const aumentaTela = document.querySelector('section')
+const aumentaTela = document.querySelector('main')
 aumentaTela.classList.add('paddingTela')
