@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="./css/style.css" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 		<title>Rio 10</title>
 </head>
 <body>
@@ -36,22 +37,299 @@
 	</header>
 	<main>
 		<section>
-            <div class="container text-bg-light rounded pt-3">
-				<div class="row justify-content-center">
-					<div class="col-lg-3 text-center">
-						<img src="./imagens/profile_picture.png" class="rounded-circle" alt="profile_picture">
-						<p><a class="text-black" href="#">Editar perfil</a></p>
+            <div class="container pt-3">
+				<div class="row g-3 justify-content-center">
+					<div class="col-lg-3 bg-dark text-light text-center me-4 rounded">
+						<div class="row">
+							<div class="col">
+								<img src="./imagens/profile_picture.png" class="my-3" alt="profile_picture">
+							</div>
+						</div>
+						<ul class="list-unstyled mb-5 fs-5">
+							<li class="position-relative mt-5 mb-4">
+								<button class="btn btn-primary rounded-pill">Mensagens</button>
+								<span class="position-absolute top-0 start-80 translate-middle badge rounded-pill text-bg-info">
+									2
+									<span class="visually-hidden">unread messages</span>
+								</span>
+							</li>
+							<li class="position-relative mb-4">
+								<button class="btn btn-primary rounded-pill">Notificações</button>
+								<span class="position-absolute top-0 start-80 translate-middle badge rounded-pill text-bg-info">
+									99+
+									<span class="visually-hidden">unread messages</span>
+								</span>
+							</li>
+							<li class="border-top">Something Else</li>
+						</ul>
+						<p>Leaderboards:</p>
 					</div>
-					<div class="col-lg-3">
-						<h3 class="fs-5">Suas informações:</h3>
+					<div class="col-lg-8 bg-light rounded">
+						<h1 class="display-5 m-3">Suas informações:</h1>
+						<h2 class="fs-5 m-3 text-warning">Aviso: Complete seu perfil e desbloqueie todos os recursos disponíveis</h2>
+						<div class="row m-1">
+							<div class="col-lg-9 mb-3">
+								<div class="progress" role="progressbar" aria-label="striped progress" aria-valuenow="27" aria-valuemin="0" aria-valuemax="100">
+									<div class="progress-bar progress-bar-striped bg-warning" style="width: 27%">Nível de perfil: 27%</div>
+								</div>
+							</div>
+						</div>
+						<div class="row justify-content-center text-center">
+							<div class="col-md-12 col-lg-5">
+								<div class="form-floating">
+									<select class="form-select mb-3" id="floatingSelectGrid" aria-label="select" required>
+										<option value="goleiro">Goleiro</option>
+										<option value="libero">Líbero</option>
+										<option value="lateral">Lateral</option>
+										<option value="volante">Volante</option>
+										<option value="ala">Ala</option>
+										<option value="meiaContencao">Meia de Contenção</option>
+										<option value="meiaArmacao">Meia de Armação</option>
+										<option value="meiaExtremado">Meia extremado</option>
+										<option value="meiaAtacante">Meia atacante</option>
+										<option value="atacanteRecuado">Atacante recuado</option>
+										<option value="atacanteBeirada">Atacante de beirada</option>
+										<option value="atacanteArea">Atacante de área</option>
+									</select>
+									<Label for="floatingSelectGrid" class="mb-2">Selecione sua Posição:</Label>
+								</div>
+							</div>
+						</div>
+						<div class="row justify-content-center text-center">
+							<div class="col-md-12 col-lg-5">
+								<div class="form-floating">
+									<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" required></textarea>
+									<label for="floatingTextarea">Experiência anterior:</label>
+								</div>
+								<dl class="mb-3" data-anime="accordion">
+									<dt class="border border-primary border-top-0 rounded-bottom"></dt>
+									<dd>Campeonatos regionais, estaduais, nacionais ou internacionais em que jogou</dd>
+								</dl>
+							</div>
+							<div class="col-md-12 col-lg-5">
+								<div class="form-floating">
+									<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" required></textarea>
+									<label for="floatingTextarea">Nível de competição:</label>
+								</div>
+								<dl class="mb-3" data-anime="accordion">
+									<dt class="border border-primary border-top-0 rounded-bottom"></dt>
+									<dd>Liste os clubes em que você jogou anteriormente, incluindo o nome do clube,
+										a duração do período em que esteve no clube e quaisquer conquistas ou destaques durante esse tempo.
+									</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="row justify-content-center text-center">
+							<div class="col-md-12 col-lg-5">
+								<div class="form-floating">
+									<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" required></textarea>
+									<label for="floatingTextarea">Histórico de conquistas:</label>
+								</div>
+								<dl class="mb-3" data-anime="accordion">
+									<dt class="border border-primary border-top-0 rounded-bottom"></dt>
+									<dd>Mencione quaisquer títulos, prêmios individuais ou conquistas notáveis
+										que você obteve ao longo da sua carreira, como artilharias,
+										seleções para times de base, participações em seleções nacionais, entre outros.
+									</dd>
+								</dl>
+							</div>
+							<div class="col-md-12 col-lg-5">
+								<div class="form-floating">
+									<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" required></textarea>
+									<label for="floatingTextarea">Estatísticas relevantes:</label>
+								</div>
+								<dl class="mb-3" data-anime="accordion">
+									<dt class="border border-primary border-top-0 rounded-bottom"></dt>
+									<dd>Inclua estatísticas relevantes, como número de gols marcados,
+										assistências, número de jogos disputados, percentual de vitórias, etc.
+										Essas informações podem ajudar a demonstrar seu desempenho e contribuição para as equipes anteriores.
+									</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="row justify-content-center text-center">
+							<div class="col-md-12 col-lg-5">
+								<div class="form-floating">
+									<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" required></textarea>
+									<label for="floatingTextarea">Habilidades técnicas:</label>
+								</div>
+								<dl class="mb-3" data-anime="accordion">
+									<dt class="border border-primary border-top-0 rounded-bottom"></dt>
+									<dd>Liste as principais habilidades técnicas que você possui, 
+										como domínio de bola, chutes precisos, velocidade, passe, drible, etc. 
+										Você também pode mencionar habilidades específicas relacionadas à sua posição, 
+										como habilidades defensivas ou capacidade de finalização.
+									</dd>
+								</dl>
+							</div>
+							<div class="col-md-12 col-lg-5">
+								<div class="form-floating">
+									<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" required></textarea>
+									<label for="floatingTextarea">Habilidades táticas:</label>
+								</div>
+								<dl class="mb-3" data-anime="accordion">
+									<dt class="border border-primary border-top-0 rounded-bottom"></dt>
+									<dd>Descreva sua compreensão do jogo tático, como sua capacidade de ler o jogo,
+										tomar decisões estratégicas e se posicionar adequadamente em campo. 
+										Destaque sua inteligência tática e visão de jogo.
+									</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="row justify-content-center text-center">
+							<div class="col-md-12 col-lg-5">
+								<div class="form-floating">
+									<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" required></textarea>
+									<label for="floatingTextarea">Características físicas:</label>
+								</div>
+								<dl class="mb-3" data-anime="accordion">
+									<dt class="border border-primary border-top-0 rounded-bottom"></dt>
+									<dd>Mencione sua altura, peso e quaisquer outras características físicas relevantes para a sua posição,
+										como velocidade, força, resistência, etc.
+									</dd>
+								</dl>
+							</div>
+							<div class="col-md-12 col-lg-5">
+								<div class="form-floating">
+									<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" required></textarea>
+									<label for="floatingTextarea">Formação acadêmica:</label>
+								</div>
+								<dl class="mb-3" data-anime="accordion">
+									<dt class="border border-primary border-top-0 rounded-bottom"></dt>
+									<dd>Caso tenha concluído ou esteja cursando algum curso de graduação,
+										pós-graduação ou qualquer tipo de educação formal relevante.
+									</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="row justify-content-center text-center">
+							<div class="col-md-12 col-lg-5">
+								<div class="form-floating">
+									<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" required></textarea>
+									<label for="floatingTextarea">Idiomas:</label>
+								</div>
+								<dl class="mb-3" data-anime="accordion">
+									<dt class="border border-primary border-top-0 rounded-bottom"></dt>
+									<dd>Se você fala algum idioma além do seu idioma nativo, 
+										especifique quais idiomas você domina e seu nível de proficiência.
+									</dd>
+								</dl>
+							</div>
+							<div class="col-md-12 col-lg-5">
+								<div class="form-floating">
+									<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" required></textarea>
+									<label for="floatingTextarea">Certificações ou cursos complementares:</label>
+								</div>
+								<dl class="mb-3" data-anime="accordion">
+									<dt class="border border-primary border-top-0 rounded-bottom"></dt>
+									<dd>Liste quaisquer certificações relevantes, como cursos de treinamento, 
+										cursos de habilidades específicas ou outros cursos que possam destacar sua busca 
+										por desenvolvimento e aprimoramento.
+									</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="row justify-content-center text-center">
+							<div class="col-md-12 col-lg-5">
+								<div class="form-floating">
+									<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" required></textarea>
+									<label for="floatingTextarea">Lesões:</label>
+								</div>
+								<dl class="mb-3" data-anime="accordion">
+									<dt class="border border-primary border-top-0 rounded-bottom"></dt>
+									<dd>Caso tenha sofrido alguma lesão significativa durante sua carreira, 
+										mencione-a e inclua informações sobre sua recuperação e retorno às atividades normais.
+									</dd>
+								</dl>
+							</div>
+							<div class="col-md-12 col-lg-5">
+								<div class="form-floating">
+									<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" required></textarea>
+									<label for="floatingTextarea">Disponibilidade:</label>
+								</div>
+								<dl class="mb-3" data-anime="accordion">
+									<dt class="border border-primary border-top-0 rounded-bottom"></dt>
+									<dd>Indique sua disponibilidade para treinos, viagens e mudança de localização, caso necessário.</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="row justify-content-center text-center">
+							<div class="col-md-12 col-lg-5">
+								<div class="form-floating">
+									<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" required></textarea>
+									<label for="floatingTextarea">Perfil nas redes sociais:</label>
+								</div>
+								<dl class="mb-3" data-anime="accordion">
+									<dt class="border border-primary border-top-0 rounded-bottom"></dt>
+									<dd>Se você possui um perfil nas redes sociais relacionado à sua carreira no futebol 
+										(por exemplo, Instagram, Twitter), forneça os links para que o treinador possa conhecer melhor
+										o seu perfil e acompanhar suas atividades.
+									</dd>
+								</dl>
+							</div>
+							<div class="col-md-12 col-lg-5">
+								<div class="form-floating">
+									<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" required></textarea>
+									<label for="floatingTextarea">Interesses e hobbies:</label>
+								</div>
+								<dl class="mb-3" data-anime="accordion">
+									<dt class="border border-primary border-top-0 rounded-bottom"></dt>
+									<dd>Se desejar, pode mencionar interesses e hobbies fora do futebol que possam 
+										fornecer uma visão mais abrangente sobre você como pessoa.
+									</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="row justify-content-center text-center">
+							<div class="col-md-12 col-lg-5">
+								<div class="form-floating">
+									<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" required></textarea>
+									<label for="floatingTextarea">Características pessoais:</label>
+								</div>
+								<dl class="mb-3" data-anime="accordion">
+									<dt class="border border-primary border-top-0 rounded-bottom"></dt>
+									<dd>Destaque características pessoais relevantes para o futebol, como determinação, 
+										liderança, trabalho em equipe, disciplina, entre outras.
+									</dd>
+								</dl>
+							</div>
+							<div class="col-md-12 col-lg-5">
+								<div class="form-floating">
+									<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" required></textarea>
+									<label for="floatingTextarea">Indicações ou recomendações:</label>
+								</div>
+								<dl class="mb-3" data-anime="accordion">
+									<dt class="border border-primary border-top-0 rounded-bottom"></dt>
+									<dd>Se você recebeu recomendações ou indicações de pessoas respeitadas no meio do futebol, mencione-as no currículo.</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="row justify-content-center text-center">
+							<div class="col-md-12 col-lg-5">
+								<div class="form-floating">
+									<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" required></textarea>
+									<label for="floatingTextarea">Referências:</label>
+								</div>
+								<dl class="mb-3" data-anime="accordion">
+									<dt class="border border-primary border-top-0 rounded-bottom"></dt>
+									<dd>Se possível, forneça referências de treinadores anteriores, colegas de equipe ou outras pessoas que possam atestar suas habilidades e caráter.</dd>
+								</dl>
+							</div>
+							<div class="col-md-12 col-lg-5">
+								<div class="form-floating">
+									<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" required></textarea>
+									<label for="floatingTextarea">Vídeo de destaque:</label>
+								</div>
+								<dl class="mb-3" data-anime="accordion">
+									<dt class="border border-primary border-top-0 rounded-bottom"></dt>
+									<dd>Considere incluir um link para um vídeo com destaques das suas melhores jogadas ou partidas. Isso pode dar ao treinador uma visão mais clara das suas habilidades em ação.</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="col text-center my-3">
+							<button class="btn btn-primary" type="submit">Salvar</button>
+						</div>
 					</div>
-					<div class="col-lg-3">
-						<h3 class="fs-5">Estatísticas:</h3>
-					</div>
-					<div class="col-lg-3">
-						<h3 class="fs-5">Leaderboards:</h3>
-					</div>
-					<div class="col-lg-3"></div>
 				</div>
 			</div>
 			<div class="row text-light my-3">
@@ -82,7 +360,7 @@
             </div>
 		</section>
 	</main>
-	<footer class="bg-dark text-white fixed-bottom">
+	<footer class="bg-dark text-white">
 			<div class="container text-center">
 				<div class="row justify-content-center">
 					<div class="col-md-3 py-3">
@@ -90,8 +368,6 @@
 						<ul class="list-unstyled">
 							<li><a href="index.html" class="link">Home</a></li>
 							<li><a href="clube.html" class="link">Clube</a></li>
-							<li><a href="atleta.html" class="link">Atleta</a></li>
-							<li><a href="treinador.html" class="link">Treinador</a></li>
 						</ul>
 					</div>
 					<div class="col-md-3 py-3">
@@ -127,8 +403,8 @@
 			</div>
 	</footer>
 </body>
-<script type="text/javascript" src="./js/jquery-3.3.1.slim.min.js"></script>
-<script type="text/javascript" src="./js/popper.min.js"></script>
-<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script type="module" src="./js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </html>

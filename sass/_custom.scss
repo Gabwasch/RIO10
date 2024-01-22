@@ -3,10 +3,10 @@
 
 // Include any default variable overrides here (though functions won't be available)
 /* definindo variáveis para cores */
-$primary: #0d3269;
+$primary: #1a239b;
 $secondary: #982cd6;
 $tertiary: #ce9fd4;
-$success: #37aa3c;
+$success: #1d8a22;
 $info: #63e7e7;
 $warning: #f38f3c;
 $danger: #df371d;
@@ -43,7 +43,7 @@ body{
 }
 
 #info{
-  background: linear-gradient(rgb(57, 57, 150), rgb(5, 113, 139));
+  background: linear-gradient(rgb(8, 54, 116), rgb(68, 105, 173));
   padding-bottom: 340px;
 }
 
