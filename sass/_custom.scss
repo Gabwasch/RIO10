@@ -8,7 +8,11 @@ body{
 }
 
 #beckground{
-  background: linear-gradient(rgb(8, 54, 116), rgb(68, 105, 173));
+  background-image: url(../imagens/background.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  // background: linear-gradient(rgb(177, 228, 39), rgb(68, 148, 44));
   padding-bottom: 340px;
 }
 

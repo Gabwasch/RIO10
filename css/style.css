@@ -9,7 +9,9 @@ body {
 }
 
 #beckground {
-  background: linear-gradient(#083674, #4469ad);
+  background-image: url(../imagens/background.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
   padding-bottom: 340px;
 }
 
