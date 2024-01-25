@@ -25,6 +25,8 @@ Projeto construído em Django, HTML, CSS e JavaScript. O objetivo da aplicação
 
 :heavy_check_mark: Tela "Minha Área" com informações do usuário, foto, estatísticas e leaderboards.
 
+:heavy_check_mark: Responsividade Mobile de todo projeto.
+
 
 <h1>## Pré-requisitos</h1>
 
@@ -41,9 +43,8 @@ Projeto construído em Django, HTML, CSS e JavaScript. O objetivo da aplicação
 **Windows Power Shell/Outro terminal:**
 
 1. Comando "cd" para localizar a pasta do projeto de desejo
-2. pip install Django
+2. pip install requirements.txt
 3. django-admin startproject core
-4. pip install mysqlclient
 
 **MySQL:**
 
