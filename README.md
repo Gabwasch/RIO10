@@ -11,15 +11,21 @@ Projeto construído em Django, HTML, CSS e JavaScript. O objetivo da aplicação
 ### Back-end:
 
 :heavy_check_mark: Cadastro de novos usuários com informações salvas em um banco relacional.
+
 :heavy_check_mark: Complementos do cadastro salvos em outra tabela do banco.
+
 :heavy_check_mark: Controle de autenticação de usuários via Django e SQL.Ao ser realizado o cadastro de novos usuários a informação é salva em um banco relacional, os complementos do cadastro solicitados em outra página html também são salvos em uma outra tabela do banco.
 
 
 ### Front-end:
 
 :heavy_check_mark: Tela principal "Home" com um header contendo a logo da empresa, botões de "login" e "cadastro". A home também possui uma mensagem de boas-vindas, tutorial de cadastro e um footer com páginas, campo de "outros" para sugestões e suporte, e um campo para redes sociais com links incorporados.
+
 :heavy_check_mark: Tela de complemento de cadastro com campos específicos dependendo do tipo de pessoa cadastrada (Atleta, Treinador, etc.).
+
 :heavy_check_mark: Tela "Minha Área" com informações do usuário, foto, estatísticas e leaderboards.
+
+:heavy_check_mark: Responsividade Mobile de todo projeto.
 
 
 <h1>## Pré-requisitos</h1>
@@ -37,16 +43,15 @@ Projeto construído em Django, HTML, CSS e JavaScript. O objetivo da aplicação
 **Windows Power Shell/Outro terminal:**
 
 1. Comando "cd" para localizar a pasta do projeto de desejo
-2. pip install Django
+2. pip install requirements.txt
 3. django-admin startproject core
-4. pip install mysqlclient
 
-MySQL:
+**MySQL:**
 
 1. CREATE DATABASE startup;
 2. USE DATABASE startup;
 
-Python:
+**Python:**
 
 Após a configuração do ambiente e criação do banco de dados, siga estes passos:
 
@@ -56,7 +61,7 @@ Após a configuração do ambiente e criação do banco de dados, siga estes pas
 4. Realize a migração criada: python manage.py migrate.
 5. Inicie o servidor: python manage.py runserver.
 
-<h1>Lembre-se de instalar todos os pré-requisitos, pré-configurar o ambiente Django, autenticação do usuário root no MySQL e alterar a variável de senha no arquivo .\app\settings.py.</h1>
+Lembre-se de instalar todos os pré-requisitos, pré-configurar o ambiente Django, autenticação do usuário root no MySQL e alterar a variável de senha no arquivo .\app\settings.py.
 
 <h1>## Desenvolvedores :octocat:</h1>
 
