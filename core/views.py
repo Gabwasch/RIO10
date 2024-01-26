@@ -1,8 +1,10 @@
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth import login
+from django.contrib.auth import login, logout
 from django.contrib import messages
 from .forms import CustomAuthenticationForm, CadastroForm
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+
+
 
 def index(request):
     return render(request, 'index.html')
@@ -11,7 +13,10 @@ def cadastro(request):
     if request.method == 'POST':
         form = CadastroForm(request.POST)
         if form.is_valid():
-            form.save()
+            user = form.save()
+            perfil = user.perfil
+            perfil.tipo_cadastro = form.cleaned_data['tipo_cadastro']
+            perfil.save()
             messages.success(request, 'Cadastro realizado com sucesso!')
             return redirect('index')
     else:
@@ -33,5 +38,11 @@ def login_view(request):
     
     return render(request, 'login.html', {'form': form})
 
+@login_required
 def minha_area(request):
     return render(request, 'minha_area.html')
+
+def logout_view(request):
+    logout(request)
+    messages.success(request, 'Logout realizado com sucesso!')
+    return redirect('index')
