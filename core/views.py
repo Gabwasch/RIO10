@@ -1,7 +1,7 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.contrib import messages
-from .forms import CustomAuthenticationForm
+from .forms import CustomAuthenticationForm, CadastroForm
 from django.shortcuts import render, redirect
 
 def index(request):
@@ -9,13 +9,13 @@ def index(request):
 
 def cadastro(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = CadastroForm(request.POST)
         if form.is_valid():
             form.save()
             messages.success(request, 'Cadastro realizado com sucesso!')
             return redirect('index')
     else:
-        form = UserCreationForm()
+        form = CadastroForm()
     return render(request, 'cadastro.html', {'form': form})
 
 def login_view(request):
