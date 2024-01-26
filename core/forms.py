@@ -3,11 +3,6 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from .models import Pessoa
 
-from django import forms
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User
-from .models import Perfil
-
 class CadastroForm(UserCreationForm):
     # Adicione campos personalizados aqui
     first_name = forms.CharField(max_length=30, required=True, help_text='Required.')
