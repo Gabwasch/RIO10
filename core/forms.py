@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
-from .models import Pessoa, Perfil
+from .models import Perfil
 
 
 class CadastroForm(UserCreationForm):
@@ -26,5 +26,5 @@ class CadastroForm(UserCreationForm):
 class CustomAuthenticationForm(AuthenticationForm):
     # Se necessário, adicione campos personalizados aqui
     class Meta:
-        model = Pessoa
+        model = CadastroForm
         fields = ['username', 'senha']
