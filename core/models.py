@@ -1,6 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import User
 
-# Create your models here.
 class Pessoa(models.Model):
     nome = models.CharField(max_length=255)
     username = models.CharField(max_length=255, unique=True)
@@ -9,6 +9,9 @@ class Pessoa(models.Model):
     nacionalidade = models.CharField(max_length=100)
     senha = models.CharField(max_length=255)
 
+class Perfil(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    tipo_cadastro = models.CharField(max_length=20, choices=[('atleta', 'Atleta'), ('treinador', 'Treinador'), ('outros', 'Outros')])
+
     def __str__(self):
-        return self.nome
-    
+        return self.user.username  
