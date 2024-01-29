@@ -4,14 +4,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Cadastro</title>
 </head>
 <body>
-    <h2>Cadastro</h2>
-    <form method="post" action="{% url 'cadastro' %}">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Enviar</button>
-    </form>
+    <header>
+        <nav class="navbar navbar-expand-lg box-shadow fixed-top bg-dark" data-bs-theme="dark">
+			<div class="container-fluid">
+			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+					<a class="navbar-brand" href="./index.html">Rio10</a>
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./cadastro.html">Cadastre-se</a>
+						</li>
+					</ul>
+			  </div>
+			</div>
+		</nav>
+    </header>
+    <main class="container bg-light rounded my-3" style="--bs-bg-opacity: .5">
+        <h2 class="display-4 text-center">Preencha seus dados:</h2>
+        <form class="row g-3 needs-validation justify-content-center" novalidate method="post" action="{% url 'cadastro' %}">
+            <div class="col-xl-6">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="{{ form.first_name.id_for_label }}" class="form-label">Primeiro Nome</label>
+                    {{ form.first_name }}
+                </div>
+                <div class="mb-3">
+                    <label for="{{ form.last_name.id_for_label }}" class="form-label">Sobrenome</label>
+                    {{ form.last_name }}
+                </div>
+                <div class="mb-3">
+                    <label for="{{ form.username.id_for_label }}" class="form-label">Nome de Usuário</label>
+                    {{ form.username }}
+                </div>
+                <div class="mb-3">
+                    <label for="{{ form.email.id_for_label }}" class="form-label">Email</label>
+                    {{ form.email }}
+                </div>
+                <div class="mb-3">
+                    <label for="{{ form.tipo_cadastro.id_for_label }}" class="form-label">Tipo de Cadastro</label>
+                    {{ form.tipo_cadastro }}
+                </div>
+                <div class="mb-3">
+                    <label for="{{ form.password1.id_for_label }}" class="form-label">Senha</label>
+                    {{ form.password1 }}
+                </div>
+                <div class="mb-3">
+                    <label for="{{ form.password2.id_for_label }}" class="form-label">Confirme a Senha</label>
+                    {{ form.password2 }}
+                </div>
+            </div>
+            <div class="col-md-12 text-center">
+                <button class="btn btn-primary mb-3" type="submit">Enviar</button>
+            </div>
+        </form>
+    </main>
+    <footer class="bg-dark text-white">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-md-3 py-3">
+                    <h4 class="h6">PÁGINAS</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="link">Home</a></li>
+                        <li><a href="clube.html" class="link">Clube</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 py-3">
+                    <h4 class="h6">OUTROS</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="link">Contato</a></li>
+                        <li><a href="#" class="link">Sugestões</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 py-3">
+                    <h4 class="h6">SUPORTE</h4>
+                    <ul class="list-unstyled text-light">
+                        <li>suporte@gmail.com</li>
+                        <li>51 99999-9999</li>
+                        <li data-semana="1,2,3,4,5" data-horario="8,20">De Seg. à Sex. das 8h às 20h</li>
+                    </ul>
+                </div>
+                <div class="col-md-2 py-3">
+                    <h4 class="h6">REDES SOCIAIS</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <button type="button" class="btn btn-outline-light mb-2"><img src="{% static 'imagens/facebook.svg' %}" style="height: 20px;"> Facebook</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-outline-light mb-2"><img src="{% static 'imagens/instagram.svg' %}" style="height: 20px;"> Instagram</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-outline-light mb-2"><img src="{% static 'imagens/threads.svg' %}" style="height: 20px;"> Threads</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% load static %}
+    <script type="module" src="{% static 'js/script.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
+<!-- CADASTRO ANTES DA MUDANÇA SUGERIDA EM: cadastro.html -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Cadastro</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg box-shadow fixed-top bg-dark" data-bs-theme="dark">
+			<div class="container-fluid">
+			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+					<a class="navbar-brand" href="./index.html">Rio10</a>
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./cadastro.html">Cadastre-se</a>
+						</li>
+					</ul>
+			  </div>
+			</div>
+		</nav>
+    </header>
+    <main class="container bg-light rounded">
+        <h2 class="display-4 text-center">Preencha seus dados:</h2>
+        <form class="row g-3 needs-validation justify-content-center" novalidate method="post" action="{% url 'cadastro' %}">
+            <div class="col-xl-6">
+                {% csrf_token %}
+                {{ form.as_p }}
+            </div>
+            <div class="col-xl-12 text-center">
+                <button class="btn btn-primary" type="submit">Enviar</button>
+            </div>
+        </form>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html> -->
